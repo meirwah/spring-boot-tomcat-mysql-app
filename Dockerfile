@@ -21,4 +21,4 @@ ADD src/ /app/src/
 
 WORKDIR /app/
 
-RUN mvn package && java -jar target/spring-boot-sample-tomcat-1.1.5.RELEASE.jar
+RUN mvn package
