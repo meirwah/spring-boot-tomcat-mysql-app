@@ -1,3 +1,5 @@
 FROM ubuntu:latest
 
-MAINTAINER Meir wahnon
+MAINTAINER Meir Wahnon
+
+RUN apt-get update
