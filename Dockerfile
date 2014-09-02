@@ -18,3 +18,7 @@ RUN apt-get install maven -y
 ADD pom.xml /app/
 
 ADD src/ /app/src/
+
+WORKDIR /app/
+
+RUN mvn package && java -jar target/spring-boot-sample-tomcat-1.1.5.RELEASE.jar
