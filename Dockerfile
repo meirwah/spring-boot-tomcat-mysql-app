@@ -6,4 +6,4 @@ RUN apt-get update
 
 RUN apt-get install default-jre -y
 
-RUN apt-get install default-jdk
+RUN apt-get install default-jdk -y
