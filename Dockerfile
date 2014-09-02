@@ -15,4 +15,6 @@ RUN apt-get install default-jdk -y
 
 RUN apt-get install maven -y
 
-ADD pom.xml /
+ADD pom.xml /app/
+
+ADD src/ /app/src/
