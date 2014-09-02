@@ -4,4 +4,4 @@ MAINTAINER Meir Wahnon
 
 RUN apt-get update
 
-RUN apt-get install default-jre
+RUN apt-get install default-jre -y
