@@ -16,18 +16,28 @@
 
 package sample.tomcat.service;
 
-import org.springframework.beans.factory.annotation.Value;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import sample.tomcat.domain.Name;
+
+import java.util.Iterator;
 
 @Component
 public class HelloWorldService {
 
-    @Value("${name:Meshi}")
-    private String name;
+
+    @Autowired
+    private NameRepository nameRepository;
+
+    private String DEFUALT_NAME = "score";
 
     public String getHelloMessage() {
-        return "Hello " + this.name;
+        Iterator<Name> names = nameRepository.findAll().iterator();
+        String name = DEFUALT_NAME;
+        while(names.hasNext()){
+            name = names.next().getValue();
+        }
+        return "Hello " + name;
     }
 
 }
